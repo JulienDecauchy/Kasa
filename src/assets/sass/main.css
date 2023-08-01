@@ -1,0 +1,7 @@
+header {
+  height: 4.25 rem;
+}
+header .flexDiv {
+  display: flex;
+  justify-content: space-around;
+}/*# sourceMappingURL=main.css.map */

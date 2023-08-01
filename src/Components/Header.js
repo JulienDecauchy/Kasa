@@ -4,30 +4,32 @@ import { Link } from "react-router-dom";
 
 function Header() {
     return (
-        <div>
-            <div>
-                <img 
-                    src={mainLogo}
-                    alt="Logo Kasa"
-                />
+        <header>
+            <div className="div_headerflex">
+                <div className="div_headerlogo">
+                    <img 
+                        src={mainLogo}
+                        alt="Logo Kasa"
+                    />
+                </div>
+                <div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <Link to="/" class="list">
+                                    Accueil
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/apropos" class="list">
+                                    A Propos
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/" class="list">
-                                Accueil
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/apropos" class="list">
-                                A Propos
-                            </Link>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        </header>
     );
 };
 
