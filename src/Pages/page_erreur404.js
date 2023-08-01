@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
 
 function Erreur404() {
   return (
-    <div>Erreur 404</div>
+    <>
+      <Header />
+      <Footer />
+    </>
   )
 }
 

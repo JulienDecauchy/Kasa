@@ -6,12 +6,10 @@ import Accueil from "../src/Pages/page_accueil";
 import Apropos from "../src/Pages/page_apropos";
 import Logement from "../src/Pages/page_logement";
 import Erreur404 from "../src/Pages/page_erreur404";
-import NavBar from "./Components/NavBar";
 
 function App() {
   return (
     <>
-      <NavBar />
       {/* Defining routes path and rendering components as element */}
       <Routes>
         <Route path="/" element={<Accueil />} />
