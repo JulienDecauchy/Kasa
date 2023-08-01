@@ -1,0 +1,27 @@
+.div_background-img {
+    position: relative;
+    text-align: center;
+        p {
+            position: absolute;
+            z-index: 1;
+            font-size: 3rem;
+            top: 15%;
+            left: 33%;
+        }
+
+        img {
+            box-sizing: border-box;
+            filter: brightness(70%);
+            border-radius: 25px;
+            object-fit: cover;
+            height: 14rem;
+            width: 110rem;
+        }
+}
+
+.div_background-cards {
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: lightgrey;
+    width: 100rem;
+}

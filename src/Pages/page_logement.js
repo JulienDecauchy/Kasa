@@ -6,6 +6,7 @@ function Logement() {
   return (
     <>
       <Header />
+        <div>Logement</div>
       <Footer />
     </>
   )
