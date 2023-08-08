@@ -1,8 +1,13 @@
 import React from "react";
 import mainLogo from '../assets/Logo/Kasa Header_LOGO.png';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Header() {
+    const location = useLocation();
+    const { pathname } = location;
+    const splitLocation = pathname.split("/");
+
     return (
         <header>
             <div className="div_headerflex">
@@ -15,15 +20,15 @@ function Header() {
                 <div>
                     <nav>
                         <ul>
-                            <li>
-                                <Link to="/" class="list">
+                            <li className={splitLocation[1] === "" ? "underline" : ""}>
+                                <NavLink to="/" class="list">
                                     Accueil
-                                </Link>
+                                </NavLink>
                             </li>
-                            <li>
-                                <Link to="/apropos" class="list">
+                            <li className={splitLocation[1] === "apropos" ? "underline" : ""}>
+                                <NavLink to="/apropos" class="list">
                                     A Propos
-                                </Link>
+                                </NavLink>
                             </li>
                         </ul>
                     </nav>
