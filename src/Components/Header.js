@@ -21,12 +21,12 @@ function Header() {
                     <nav>
                         <ul>
                             <li className={splitLocation[1] === "" ? "underline" : ""}>
-                                <Link to="/" class="list">
+                                <Link to="/" className="list">
                                     Accueil
                                 </Link>
                             </li>
                             <li className={splitLocation[1] === "apropos" ? "underline" : ""}>
-                                <Link to="/apropos" class="list">
+                                <Link to="/apropos" className="list">
                                     A Propos
                                 </Link>
                             </li>
