@@ -1,6 +1,6 @@
 import React from "react";
 import mainLogo from '../assets/Logo/Kasa Header_LOGO.png';
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 function Header() {
@@ -21,14 +21,14 @@ function Header() {
                     <nav>
                         <ul>
                             <li className={splitLocation[1] === "" ? "underline" : ""}>
-                                <NavLink to="/" class="list">
+                                <Link to="/" class="list">
                                     Accueil
-                                </NavLink>
+                                </Link>
                             </li>
                             <li className={splitLocation[1] === "apropos" ? "underline" : ""}>
-                                <NavLink to="/apropos" class="list">
+                                <Link to="/apropos" class="list">
                                     A Propos
-                                </NavLink>
+                                </Link>
                             </li>
                         </ul>
                     </nav>
