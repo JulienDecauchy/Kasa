@@ -1,0 +1,11 @@
+@keyframes spin {
+    0%{
+        transform: spin(0deg);
+    }
+    50%{
+        transform: spin(-75deg);
+    }
+    100%{
+        transform: spin(-180deg);
+    }
+}

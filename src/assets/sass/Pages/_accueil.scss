@@ -1,3 +1,7 @@
+#section_cards {
+    padding-left: 5.5rem;
+}
+
 .div_background-img {
     position: relative;
     text-align: center;
@@ -6,7 +10,7 @@
             z-index: 1;
             font-size: 3rem;
             top: 15%;
-            left: 33%;
+            left: 40%;
         }
 
         img {
@@ -20,8 +24,16 @@
 }
 
 .div_background-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     border-radius: 25px;
-    background-color: lightgrey;
+    background-color: rgb(245, 245, 245);
     width: 100rem;
+
+    .div_accueil-cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

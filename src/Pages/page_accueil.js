@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import background_img from"../assets/img/img_accueil01.png"
+import AccueilCards from '../Components/accueil_cards'
 
 function Accueil() {
   return (
@@ -17,9 +18,11 @@ function Accueil() {
               />
             </div>
           </section>
-          <section>
+          <section id='section_cards'>
             <div className='div_background-cards'>
-              <div>Test</div>
+              <div className='div_accueil-cards'>
+                <AccueilCards />
+              </div>
             </div>
           </section>
         </main>

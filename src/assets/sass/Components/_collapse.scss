@@ -1,0 +1,50 @@
+.aproposCollapse {
+    padding-bottom: 2rem;
+
+        .collapse_title-Div {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        background-color: #FF6060;
+        box-sizing: border-box;
+        border-radius: 5px;
+        height: 3.25rem;
+        width: 90rem;
+
+             p {
+            margin: 0;
+            padding-left: 1.5rem;
+            padding-top: 0.5rem;
+            color: white;
+            }
+
+            i {
+                color: white;
+                padding-right: 1.5rem;
+                padding-top: 0.8rem;
+            }
+
+            .animation_rotation {
+                -webkit-animation:spin 1s linear;
+                -moz-animation:spin 1s linear;
+                animation:spin 1s linear;
+            }
+
+        }
+
+        .collapse_description-Div {
+            background-color: rgb(245, 245, 245);
+            box-sizing: border-box;
+            border-radius: 5px;
+            width: 90rem;
+
+            p {
+                margin: 0;
+                padding-left: 1.25rem;
+                padding-bottom: 0.8rem;
+                padding-top: 0.8rem;
+                font-size: 1.2rem;
+                color: #FF6060;
+            }
+        }
+}
