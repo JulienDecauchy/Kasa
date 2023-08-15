@@ -1,0 +1,96 @@
+#LogementMainDiv {
+    position: relative;
+    margin: 0;
+}
+
+.carrouselDiv {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 25rem;
+    margin-left: 13%;
+    .arrowDiv {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div {
+            color: white;
+            i {
+                font-size: 96px;
+            }
+        }
+        .arrowRight {
+            margin-left: 76rem;
+            cursor: pointer;
+        }
+        .arrowLeft {
+            margin-left: 2rem;
+            cursor: pointer;
+        }
+    }
+
+    img {
+        position: relative;
+        object-fit: cover;
+        border-radius: 25px;
+        height: 100%;
+        width: 100%;
+    }
+    .arrayNumber {
+        position: absolute;
+        z-index: 1;
+        left: 47%;
+        bottom: 3%;
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+.InfoDiv {
+    position: relative;
+    margin-left: 13%;
+
+    .infoTitleHostDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+            .infoTitleDiv {
+            display: flex;
+            flex-direction: column;
+            h1 {
+                font-size: 36px;
+            }
+            p {
+                font-size: 18px;
+                padding-top: 0.75rem;
+            }
+            h1, p {
+                color: #FF6060;
+                margin: 0;
+            }
+        }
+
+        .infoHostDiv {
+            position: absolute;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            margin-left: 75rem;
+            p {
+                color: #FF6060;
+                font-size: 18px;
+                padding-right: 1.5rem;
+            }
+            img {
+                border-radius: 100%;
+            }
+        }
+    }
+}
