@@ -1,9 +1,11 @@
 import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
-import logement from '../logements.json'
+import jsonLogement from '../logements.json'
+import { useParams } from 'react-router-dom'
 
 function Logement() {
+  const { id } = useParams();
 
   return (
     <>
@@ -11,27 +13,31 @@ function Logement() {
         <main>
           <section>
             <div>
-              <img
-                src={logement.pictures}
-                alt="Image de logement"
-              />
+                {jsonLogement.filter(img => img.id === id).map((img, index) => (
+                  <div key={img.id}>
+                    <img
+                      src={img.pictures}
+                      alt="Image de logement"
+                    />
+                  </div>
+                ))}
             </div>
           </section>
           <section>
             <div>
               <div>
-                <h1>{logement.title}</h1>
-                <p>{logement.location}</p>
+                <h1>{jsonLogement.title}</h1>
+                <p>{jsonLogement.location}</p>
               </div>
-              <div>{logement.host}</div>
+              <div>{jsonLogement.host}</div>
             </div>
             <div>
-              <div>{logement.tags}</div>
-              <div>{logement.rating}</div>
+              <div>{jsonLogement.tags}</div>
+              <div>{jsonLogement.rating}</div>
             </div>
             <div>
-              <div>{logement.description}</div>
-              <div>{logement.equipments}</div>
+              <div>{jsonLogement.description}</div>
+              <div>{jsonLogement.equipments}</div>
             </div>
           </section>
         </main>

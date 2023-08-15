@@ -1,25 +1,19 @@
 import React from "react";
-import logements from '../logements.json';
-import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import jsonLogement from "../logements.json";
 
 function AccueilCards() {
-    const navigate = useNavigate();
-    const leavePage = () => {
-        navigate("/Logement/:id", {
-            state: {
-                id: logements.id
-            }
-        });
-    }
-
-    const listItems = logements.map(cards =>
-            <div key={cards.id} className="cards" onClick={leavePage}>
-                <img
-                    src={cards.cover}
-                    alt="Image de couverture de la location"
-                />
-                <p>{cards.title}</p>
+    const listItems = jsonLogement.map((cards, index) =>
+            <div key={cards.id}>
+                <Link to={`/Logement/${cards.id}`}>
+                    <div className="cards">
+                        <img
+                            src={cards.cover}
+                            alt="Image de couverture de la location"
+                        />
+                        <p>{cards.title}</p>
+                    </div>
+                </Link>
             </div>
         )
 
