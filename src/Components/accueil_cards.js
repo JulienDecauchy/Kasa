@@ -6,11 +6,14 @@ import { useNavigate } from "react-router-dom";
 function AccueilCards() {
     const navigate = useNavigate();
     const leavePage = () => {
-        navigate("/Logement");
+        navigate("/Logement/:id", {
+            state: {
+                id: logements.id
+            }
+        });
     }
 
     const listItems = logements.map(cards =>
-        <>
             <div key={cards.id} className="cards" onClick={leavePage}>
                 <img
                     src={cards.cover}
@@ -18,7 +21,6 @@ function AccueilCards() {
                 />
                 <p>{cards.title}</p>
             </div>
-        </>
         )
 
     return (

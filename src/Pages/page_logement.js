@@ -4,13 +4,14 @@ import Footer from '../Components/Footer'
 import logement from '../logements.json'
 
 function Logement() {
+
   return (
     <>
       <Header />
         <main>
           <section>
             <div>
-              <img 
+              <img
                 src={logement.pictures}
                 alt="Image de logement"
               />
