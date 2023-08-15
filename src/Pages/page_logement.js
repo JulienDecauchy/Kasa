@@ -6,6 +6,16 @@ import { useParams } from 'react-router-dom'
 
 function Logement() {
   const { id } = useParams();
+  const jsonFilter = jsonLogement.filter(img => img.id === id)
+
+  const showLogementsPictures = jsonFilter.map((img, index) => (
+    <div key={img.id}>
+      <img
+        src={img.pictures[index]}
+        alt="Image de logement"
+      />
+    </div>
+  ))
 
   return (
     <>
@@ -13,14 +23,7 @@ function Logement() {
         <main>
           <section>
             <div>
-                {jsonLogement.filter(img => img.id === id).map((img, index) => (
-                  <div key={img.id}>
-                    <img
-                      src={img.pictures}
-                      alt="Image de logement"
-                    />
-                  </div>
-                ))}
+                { showLogementsPictures }
             </div>
           </section>
           <section>
