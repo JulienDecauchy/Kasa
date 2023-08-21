@@ -9,30 +9,48 @@ import LogementsÉquipementsCollapse from '../Components/logements_equipements_c
 function Logement() {
   const { id } = useParams();
   const jsonFilter = jsonLogement.filter(filter => filter.id === id)
-  //*  const jsonCarrousel = jsonFilter.map(picture => (picture.pictures))   *//
+  const jsonCarrousel = jsonFilter.map(picture => (picture.pictures))
 
   const [index, setIndex] = useState(0);
   const [number, setNumber] = useState(1);
 
   function handleNextClick() {
-    setIndex(index + 1);
-    setNumber(number + 1);
+    if (index > jsonCarrousel.length) {
+      setIndex(0)
+      setNumber(1)
+    } else {
+      setIndex(index + 1);
+      setNumber(number + 1);
+    }
   }
+
   function handlePreviousClick() {
-    setIndex(index - 1);
-    setNumber(number - 1);
+    if (index < jsonCarrousel.length) {
+      setIndex(index - 1)
+      setNumber(number -1)
+    } else {
+      setIndex(index - 1);
+      setNumber(number - 1);
+    }
+  }
+
+  let showArrow = [];
+  if (jsonCarrousel.length > 1) {
+    showArrow = [
+      <div className='arrowDiv' key={id}>
+        <div onClick={handlePreviousClick} className='arrowLeft'>
+          <i className="fa-solid fa-chevron-left" alt="flèche gauche"></i>
+        </div>
+        <div onClick={handleNextClick} className='arrowRight'>
+          <i className="fa-solid fa-chevron-right" alt="flèche droite"></i>
+        </div>
+      </div>
+    ]
   }
 
   const showPicturesSection = jsonFilter.map(img => (
     <div key={img.id} className='carrouselDiv'>
-      <div className='arrowDiv'>
-        <div onClick={handlePreviousClick} className='arrowLeft'>
-          <i className="fa-solid fa-chevron-left"></i>
-        </div>
-        <div onClick={handleNextClick} className='arrowRight'>
-          <i className="fa-solid fa-chevron-right"></i>
-        </div>
-      </div>
+        {showArrow}
       <img
         src={img.pictures[index]}
         alt="Image de logement"

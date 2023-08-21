@@ -28,7 +28,13 @@ function LogementsÉquipementsCollapse() {
                     </div>
                 </div>
                 <div>
-                    {showMore[index] && <div className="collapse_description-Div"><p>{collapse.equipments}</p></div>}
+                    {showMore[index] && <div className="collapse_description-Div">
+                        <ul>
+                            <li>
+                                {collapse.equipments}
+                            </li>
+                        </ul>
+                    </div>}
                 </div>
             </div>
         );

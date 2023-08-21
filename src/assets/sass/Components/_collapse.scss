@@ -38,13 +38,17 @@
             border-radius: 5px;
             width: 90rem;
 
-            p {
+            p, ul {
                 margin: 0;
                 padding-left: 1.25rem;
                 padding-bottom: 0.8rem;
                 padding-top: 0.8rem;
                 font-size: 1.2rem;
+                list-style-type: none;
                 color: #FF6060;
+                li {
+                    white-space: pre-wrap;
+                }
             }
         }
 }

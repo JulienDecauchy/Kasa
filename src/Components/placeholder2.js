@@ -29,3 +29,18 @@ function AccueilCards() {
 };
 
 export default AccueilCards
+
+//************************ *//
+
+function handleNextClick() {
+    const indexArray = jsonCarrousel
+    console.log(indexArray)
+    if (setIndex(index) >= (indexArray.length)) {
+      setIndex(index = 0);
+      setNumber(number = 1);
+    }
+    else {
+      setIndex(index + 1);
+      setNumber(number + 1);
+    }
+  }
