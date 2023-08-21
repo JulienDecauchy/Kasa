@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { aproposList } from "./apropos_data";
+import Vector from "../assets/img/vectorBas.svg";
 
 function AproposCollapse() {
 
@@ -21,7 +22,10 @@ function AproposCollapse() {
                 <div className="collapse_title-Div">
                     <p>{collapse.title}</p>
                     <div onClick={() => handleArrowClick(index)}>
-                        <i className="fa-solid fa-chevron-up"></i>
+                        <img
+					        src={Vector}
+					        alt="Vector"
+				        />
                     </div>
                 </div>
                 <div>
