@@ -1,10 +1,10 @@
-import emptyStar from "../assets/img/emptyStar.svg"
-import fullStar from "../assets/img/star-rate.svg"
+import emptyStar from "../assets/img/star-inactive.png"
+import fullStar from "../assets/img/star-active.png"
 
 export default function Rate({ score }) {
 	const stars = [1, 2, 3, 4, 5];
 	return (
-		<div className="rate-comp">
+		<div className="rate_star-div">
 			{stars.map((level) =>
 				score >= level ? (
 					<img
@@ -13,7 +13,7 @@ export default function Rate({ score }) {
 						src={fullStar}
 						alt="rating star"
 					/>
-				) : ( //affichage conditionnel des étoiles de score, pleine ou vide selon le score passé en props
+				) : ( 
 					<img
 						key={level.toString()}
 						className="star"

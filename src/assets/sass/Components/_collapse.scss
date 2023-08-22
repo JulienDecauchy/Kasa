@@ -44,4 +44,55 @@
                 }
             }
         }
+
+        /************************************************/
+        .collapse_logement-div {
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            background-color: #FF6060;
+            box-sizing: border-box;
+            border-radius: 5px;
+            height: 3.25rem;
+            width: 36rem;
+
+            p {
+            margin: 0;
+            padding-left: 1.5rem;
+            padding-top: 0.5rem;
+            color: white;
+            }
+
+            img {
+                padding-right: 1.5rem;
+                padding-top: 1.2rem;
+            }
+        }
+
+        .collapse_logement-detail-div {
+            background-color: rgb(245, 245, 245);
+            box-sizing: border-box;
+            border-radius: 5px;
+            width: 36rem;
+
+            p, ul {
+            margin: 0;
+            padding: 0.8rem 1.25rem 2rem 1.25rem;
+            font-size: 1.2rem;
+            list-style-type: none;
+            color: #FF6060;
+            }
+
+            li {
+                white-space: pre-wrap;
+                ::after {
+                    color: black;
+                }
+            }
+        }
+}
+
+#collapse_logement-right {
+    position: absolute;
+    margin-left: 50rem;
 }

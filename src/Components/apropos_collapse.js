@@ -29,7 +29,9 @@ function AproposCollapse() {
                     </div>
                 </div>
                 <div>
-                    {showMore[index] && <div className="collapse_description-Div"><p>{collapse.description}</p></div>}
+                    {showMore[index] && <div className="collapse_description-Div">
+                        <p>{collapse.description}</p>
+                    </div>}
                 </div>
             </div>
         );

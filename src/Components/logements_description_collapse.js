@@ -22,7 +22,7 @@ function LogementsDescriptionCollapse() {
 
     const ListItems = jsonFilter.map((collapse, index) =>
             <div key={collapse.id} tabIndex={0} className="aproposCollapse">
-                <div className="collapse_title-Div">
+                <div className="collapse_logement-div">
                     <p>Description</p>
                     <div onClick={() => handleArrowClick(index)}>
                         <img
@@ -32,7 +32,7 @@ function LogementsDescriptionCollapse() {
                     </div>
                 </div>
                 <div>
-                    {showMore[index] && <div className="collapse_description-Div">
+                    {showMore[index] && <div className="collapse_logement-detail-div">
                         <p>{collapse.description}</p>
                     </div>}
                 </div>

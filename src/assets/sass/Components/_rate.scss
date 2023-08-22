@@ -1,9 +1,10 @@
-.rate-comp {
+.rate_star-div {
+    position: absolute;
     display: flex;
     justify-content: space-between;
     width: 98px;
     height: 18px;
-    margin-top: 24px;
+    margin-left: 75rem;
 }
 
 .rate-container {
@@ -12,6 +13,6 @@
 }
 
 .star {
-    width: 15px;
-    height: 15px;
+    width: 2.25rem;
+    height: 2.25rem;
 }

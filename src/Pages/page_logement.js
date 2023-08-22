@@ -102,13 +102,13 @@ function Logement() {
           <p>{info.host.name}</p>
           </div>
         </div>
-      <div>
-        <div>{info.tags}</div>
-        <div>
-          <Rate score={info.rating}/>
+      <div className='info_tag-rate-div'>
+        <div className='info-tag'>
+          <p>{info.tags}</p>
         </div>
+        <Rate score={info.rating}/>
       </div>
-      <div>
+      <div className='Logements_collapse-Div'>
         <LogementsDescriptionCollapse />
         <LogementsÉquipementsCollapse />
       </div>

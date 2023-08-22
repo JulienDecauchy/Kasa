@@ -1,6 +1,7 @@
 #LogementMainDiv {
     position: relative;
     margin: 0;
+    padding-bottom: 0;
 }
 
 .carrouselDiv {
@@ -92,5 +93,22 @@
                 border-radius: 100%;
             }
         }
+    }
+
+    .info_tag-rate-div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+
+        .info-tag p {
+            font-size: 18px;
+            color: #FF6060;
+        }
+    }
+
+    .Logements_collapse-Div {
+        display: flex;
+        justify-content: space-between;
+        margin: 5rem 0rem 5rem 0rem;
     }
 }
