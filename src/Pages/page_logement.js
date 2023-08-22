@@ -11,51 +11,74 @@ function Logement() {
   const { id } = useParams();
   const jsonFilter = jsonLogement.filter(filter => filter.id === id)
 
-  const [index, setIndex] = useState(0);
-  const [number, setNumber] = useState(1);
-  const jsonCarrousel = jsonFilter.map(picture => (picture.pictures))
+  let [index, setIndex] = useState(0);
+  let [number, setNumber] = useState(1);
 
   console.log(jsonFilter.map(picture => (picture.pictures)))
-  console.log(jsonCarrousel.length)
   console.log(index)
 
   function handleNextClick() {
-    if (index > jsonCarrousel.length) {
-      setIndex(jsonCarrousel.length = 0)
-      setNumber(1)
-    } else {
-      setIndex(index + 1);
-      setNumber(number + 1);
-    }
+    jsonFilter.map(img => {
+      if (index === img.pictures.length -1) {
+        setIndex(index = 0)
+        setNumber(number = 1)
+      } else {
+        setIndex(index + 1)
+        setNumber(number + 1)
+      }
+    })
   }
 
   function handlePreviousClick() {
-    if (index < jsonCarrousel.length) {
-      setIndex(jsonCarrousel.length - 1)
-      setNumber(jsonCarrousel.lenght - 1)
-    } else {
-      setIndex(index - 1);
-      setNumber(number - 1);
-    }
+    jsonFilter.map(img => {
+      if (index === 0) {
+        setIndex(index = img.pictures.length -1)
+        setNumber(number = img.pictures.length)
+      } else {
+        setIndex(index - 1);
+        setNumber(number - 1);
+      }
+    })
   }
+
+  //*Affichage des flèches/nombres seulement si +1 images*//
+  let showArrow = [];
+  let showNumber = [];
+    jsonFilter.map(img => {
+      if (img.pictures.length > 1) {
+        showArrow = (
+          <div className='arrowDiv'>
+            <div onClick={handlePreviousClick} className='arrowLeft'>
+              <i className="fa-solid fa-chevron-left" alt="flèche gauche"></i>
+            </div>
+            <div onClick={handleNextClick} className='arrowRight'>
+              <i className="fa-solid fa-chevron-right" alt="flèche droite"></i>
+            </div>
+          </div>
+        )
+        showNumber = (
+          <div className='arrayNumber'>
+            <p>{number}/{img.pictures.length}</p>
+          </div>
+        )
+      } else {
+        showArrow = (
+          <div></div>
+        )
+        showNumber = (
+          <div></div>
+        )
+      }
+    })
 
   const showPicturesSection = jsonFilter.map(img => (
     <div key={img.id} className='carrouselDiv'>
-      <div className='arrowDiv'>
-        <div onClick={handlePreviousClick} className='arrowLeft'>
-          <i className="fa-solid fa-chevron-left" alt="flèche gauche"></i>
-        </div>
-        <div onClick={handleNextClick} className='arrowRight'>
-          <i className="fa-solid fa-chevron-right" alt="flèche droite"></i>
-        </div>
-      </div>
+        { showArrow }
       <img
         src={img.pictures[index]}
         alt="Image de logement"
       />
-      <div className='arrayNumber'>
-        <p>{number}/{img.pictures.length}</p>
-      </div>
+      { showNumber }
     </div>
   ))
 
