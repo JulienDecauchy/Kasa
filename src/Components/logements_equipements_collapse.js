@@ -34,9 +34,9 @@ function LogementsÉquipementsCollapse() {
                 <div>
                     {showMore[index] && <div className="collapse_logement-detail-div">
                         <ul>
-                            <li>
-                                {collapse.equipments}
-                            </li>
+                                {collapse.equipments.map((list, index) =>(
+                                    <li key={index}>{list}</li>
+                                ))}
                         </ul>
                     </div>}
                 </div>

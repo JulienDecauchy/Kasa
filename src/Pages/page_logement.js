@@ -12,7 +12,7 @@ function Logement() {
   const navigate = useNavigate();
   const jsonFilter = jsonLogement.filter(filter => filter.id === id)
 
-  /**marche pas */
+  /**marche pas = ! !!!!return!!!! ! + length */
   useEffect(() => {
     if (jsonFilter.map(filterID => filterID.id) === undefined) {
       navigate("/*")
@@ -104,7 +104,9 @@ function Logement() {
         </div>
       <div className='info_tag-rate-div'>
         <div className='info-tag'>
-          <p>{info.tags}</p>
+          {info.tags.map((tag, index) => (
+            <p key={index}>{tag}</p>
+          ))}
         </div>
         <Rate score={info.rating}/>
       </div>

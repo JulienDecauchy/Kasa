@@ -83,16 +83,9 @@
             color: #FF6060;
             }
 
-            li {
-                white-space: pre-wrap;
-                ::after {
-                    color: black;
-                }
-            }
         }
 }
 
 #collapse_logement-right {
-    position: absolute;
-    margin-left: 50rem;
+    margin-left: 16rem;
 }
