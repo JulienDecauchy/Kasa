@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import jsonLogement from "../logements.json"
 import { useParams } from 'react-router-dom';
+import Vector from "../assets/img/vectorBas.svg";
 
 function LogementsÉquipementsCollapse() {
     const { id } = useParams();
@@ -24,7 +25,10 @@ function LogementsÉquipementsCollapse() {
                 <div className="collapse_title-Div">
                     <p>Équipements</p>
                     <div onClick={() => handleArrowClick(index)}>
-                        <i className="fa-solid fa-chevron-up"></i>
+                        <img
+					        src={Vector}
+					        alt="Vector"
+				        />
                     </div>
                 </div>
                 <div>

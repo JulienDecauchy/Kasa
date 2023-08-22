@@ -1,19 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import jsonLogement from "../logements.json";
 
 function AccueilCards() {
     const listItems = jsonLogement.map(cards =>
-            <div key={cards.id}>
-                <Link to={`/Logement/${cards.id}`}>
-                    <div className="cards">
+            <div key={cards.id} className="NavCards">
+                <NavLink to={`/Logement/${cards.id}`}>
+                    <div className="cards-div_img">
                         <img
                             src={cards.cover}
                             alt="Image de couverture de la location"
                         />
-                        <p>{cards.title}</p>
+                        <div className="cards-div_p">
+                            <p>{cards.title}</p>
+                        </div>
                     </div>
-                </Link>
+                </NavLink>
             </div>
         )
 

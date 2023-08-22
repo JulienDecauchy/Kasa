@@ -1,21 +1,26 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import jsonLogement from '../logements.json'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import LogementsDescriptionCollapse from '../Components/logements_description_collapse'
 import LogementsÉquipementsCollapse from '../Components/logements_equipements_collapse'
 import Rate from '../Components/logements_rate'
 
 function Logement() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const jsonFilter = jsonLogement.filter(filter => filter.id === id)
+
+  /**marche pas */
+  useEffect(() => {
+    if (jsonFilter.map(filterID => filterID.id) === undefined) {
+      navigate("/*")
+    };
+  }, [])
 
   let [index, setIndex] = useState(0);
   let [number, setNumber] = useState(1);
-
-  console.log(jsonFilter.map(picture => (picture.pictures)))
-  console.log(index)
 
   function handleNextClick() {
     jsonFilter.map(img => {
