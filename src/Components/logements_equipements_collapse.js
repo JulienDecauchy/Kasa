@@ -26,19 +26,21 @@ function LogementsÉquipementsCollapse() {
                     <p>Équipements</p>
                     <div onClick={() => handleArrowClick(index)}>
                         <img
+                            id={index}
+                            className={ showMore[index] ? "chevron rotation" : "chevron"}
 					        src={Vector}
 					        alt="Vector"
 				        />
                     </div>
                 </div>
-                <div>
-                    {showMore[index] && <div className="collapse_logement-detail-div">
+                <div className={ showMore[index] ? "collapse_logement-detail-div animatedText" : "collapse_logement-detail-div"}>
+                    {showMore[index] &&
                         <ul>
                                 {collapse.equipments.map((list, index) =>(
                                     <li key={index}>{list}</li>
                                 ))}
                         </ul>
-                    </div>}
+                    }
                 </div>
             </div>
         );

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import jsonLogement from "../logements.json"
-import { useParams } from 'react-router-dom';
+import { json, useParams } from 'react-router-dom';
 import Vector from "../assets/img/vectorBas.svg";
 
 function LogementsDescriptionCollapse() {
@@ -26,15 +26,17 @@ function LogementsDescriptionCollapse() {
                     <p>Description</p>
                     <div onClick={() => handleArrowClick(index)}>
                         <img
+                            id={collapse.id}
+                            className={ showMore[index] ? "chevron rotation" : "chevron"}
 					        src={Vector}
 					        alt="Vector"
 				        />
                     </div>
                 </div>
-                <div>
-                    {showMore[index] && <div className="collapse_logement-detail-div">
+                <div className={ showMore[index] ? "collapse_logement-detail-div animatedText" : "collapse_logement-detail-div"}>
+                    {showMore[index] &&
                         <p>{collapse.description}</p>
-                    </div>}
+                    }
                 </div>
             </div>
         );

@@ -10,17 +10,24 @@
         border-radius: 5px;
         height: 3.25rem;
         width: 90rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
 
              p {
             margin: 0;
             padding-left: 1.5rem;
-            padding-top: 0.5rem;
             color: white;
             }
 
-            img {
-                padding-right: 1.5rem;
-                padding-top: 1.2rem;
+            .chevron {
+                transform: rotate(180deg);
+                transition: 0.4s ease-in-out;
+                cursor: pointer;
+            }
+
+            .rotation {
+                transform: rotate(0deg);
+                transition: 0.4s ease-in-out;
             }
 
         }
@@ -30,6 +37,9 @@
             box-sizing: border-box;
             border-radius: 5px;
             width: 90rem;
+            opacity: 0;
+            height: 0;
+            transition: all 0.4s ease-in-out;
 
             p, ul {
                 margin: 0;
@@ -45,6 +55,12 @@
             }
         }
 
+        .animatedText {
+            opacity: 1;
+            height: 7rem;
+            transition: all 0.4s ease-in-out;
+        }
+
         /************************************************/
         .collapse_logement-div {
             font-size: 1.5rem;
@@ -55,17 +71,24 @@
             border-radius: 5px;
             height: 3.25rem;
             width: 36rem;
+            padding-right: 1rem;
+            padding-top: 0.5rem;
 
             p {
             margin: 0;
             padding-left: 1.5rem;
-            padding-top: 0.5rem;
             color: white;
             }
 
-            img {
-                padding-right: 1.5rem;
-                padding-top: 1.2rem;
+            .chevron {
+                transform: rotate(180deg);
+                transition: 0.4s ease-in-out;
+                cursor: pointer;
+            }
+
+            .rotation {
+                transform: rotate(0deg);
+                transition: 0.4s ease-in-out;
             }
         }
 
@@ -74,6 +97,9 @@
             box-sizing: border-box;
             border-radius: 5px;
             width: 36rem;
+            opacity: 0;
+            height: 0;
+            transition: all 0.4s ease-in-out;
 
             p, ul {
             margin: 0;
@@ -88,6 +114,12 @@
                 padding-left: 0.4rem;
             }
 
+        }
+
+        .animatedText {
+            opacity: 1;
+            height: 14rem;
+            transition: all 0.4s ease-in-out;
         }
 }
 

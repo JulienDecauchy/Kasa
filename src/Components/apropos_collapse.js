@@ -23,15 +23,16 @@ function AproposCollapse() {
                     <p>{collapse.title}</p>
                     <div onClick={() => handleArrowClick(index)}>
                         <img
+                            className={ showMore[index] ? "chevron rotation" : "chevron"}
 					        src={Vector}
 					        alt="Vector"
 				        />
                     </div>
                 </div>
-                <div>
-                    {showMore[index] && <div className="collapse_description-Div">
-                        <p>{collapse.description}</p>
-                    </div>}
+                <div className={ showMore[index] ? "collapse_description-Div animatedText" : "collapse_description-Div"}>
+                    {showMore[index] &&
+                        <p aria-hidden={showMore[index] ? "false" : "true"} >{collapse.description}</p>
+                    }
                 </div>
             </div>
         );
