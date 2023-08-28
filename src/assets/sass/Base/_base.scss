@@ -1,25 +1,28 @@
 main {
-    width: 100%;
-    max-width: 1440px;
-    padding: 3rem;
-        p {
-             color: white;
-        }
-        section {
-            padding-left: 1.5rem;
-            padding-bottom: 3rem;
-        }
+  width: 100%;
+  max-width: 1440px;
+  padding: 3rem;
+
+  p {
+    color: white;
+  }
+
+  section {
+    padding-left: 1.5rem;
+    padding-bottom: 3rem;
+  }
 }
 
-@mixin devices ($breakpoint) { //the name of the mixin is devices
-  
-    @if $breakpoint == tablet {    
+@mixin devices ($breakpoint) {
+  //the name of the mixin is devices
+
+  @if $breakpoint ==tablet {
     @media only screen and (max-width: 768px) {
       @content;
     }
   }
- 
-  @if $breakpoint == mobile {
+
+  @if $breakpoint ==mobile {
     @media only screen and (max-width: 425px) {
       @content;
     }
