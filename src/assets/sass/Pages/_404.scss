@@ -6,21 +6,42 @@
     align-items: center;
     text-align: center;
     padding-left: 20rem;
+    @include    devices(mobile) {
+        padding-left: 0rem;
+    }
         img {
             padding-top: 5rem;
+            @include    devices(mobile) {
+                height: 5rem;
+            }
         }
 
         h1 {
             padding-top: 10rem;
             font-size: 36px;
+            @include    devices(mobile) {
+                font-size: 18px;
+            }
+            br {
+                display: none;
+                @include    devices(mobile) {
+                    display: block;
+                }
+            }
         }
 
         .div_link404 {
             padding: 10rem 0rem 3rem 0rem;
+            @include    devices(mobile) {
+                padding: 5rem 0rem 7rem 0rem;
+            }
                 a {
                     font-size: 18px;
                     font-weight: 500;
                     color: #FF6060;
+                    @include    devices(mobile) {
+                        font-size: 14px;
+                    }
                 }
         }
 }

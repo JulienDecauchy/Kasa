@@ -15,7 +15,7 @@ function Erreur404() {
                 src={img404}
                 alt="Image erreur 404"
               />
-              <h1>Oups! La page que vous demandez n'existe pas.</h1>
+              <h1>Oups! La page que<br/> vous demandez n'existe pas.</h1>
             </div>
             <div className='div_link404'>
               <Link to="/" className="list">
