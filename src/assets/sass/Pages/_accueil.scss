@@ -1,16 +1,35 @@
 #section_cards {
     padding-left: 5.5rem;
+    @include    devices(mobile) {
+        padding: 0rem;
+    }
 }
 
 .div_background-img {
     position: relative;
     text-align: center;
+    @include    devices(mobile) {
+        text-align: start;
+    }
+
         p {
             position: absolute;
             z-index: 1;
             font-size: 3rem;
             top: 15%;
             left: 40%;
+            @include    devices(mobile) {
+                top: 1%;
+                left: 5%;
+                font-size: 1.4rem;
+            }
+
+            br {
+                display: none;
+                @include    devices(mobile) {
+                    display: block;
+                }
+            }
         }
 
         img {
@@ -20,6 +39,10 @@
             object-fit: cover;
             height: 14rem;
             width: 110rem;
+            @include    devices(mobile)  {
+                width: 19rem;
+                height: 7rem;
+            }
         }
 }
 
@@ -31,6 +54,10 @@
     border-radius: 25px;
     background-color: rgb(245, 245, 245);
     width: 100rem;
+    @include    devices(mobile) {
+        background-color: white;
+        width: auto;
+    }
 
     .div_accueil-cards {
         display: flex;

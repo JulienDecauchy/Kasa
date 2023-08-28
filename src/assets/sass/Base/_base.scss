@@ -2,14 +2,21 @@ main {
   width: 100%;
   max-width: 1440px;
   padding: 3rem;
+  @media screen and (max-width: 425px) {
+    padding: 0;
+  }
 
   p {
     color: white;
   }
+  
 
   section {
-    padding-left: 1.5rem;
+    padding-left: 1rem;
     padding-bottom: 3rem;
+    @media screen and (max-width: 425px) {
+      padding: 0rem 0rem 1.5rem 0.7rem;
+    }
   }
 }
 

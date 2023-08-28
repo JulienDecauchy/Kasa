@@ -4,6 +4,16 @@ footer {
         p {
             font-size: 1.5rem;
             color: white;
+            @include    devices(mobile) {
+                margin: 0;
+                font-size: 0.75rem;
+            }
+            br {
+                display: none;
+                @include    devices(mobile) {
+                    display: block;
+                }
+            }
         }
 
     .div_footerflex {

@@ -11,7 +11,7 @@ function Accueil() {
         <main>
           <section>
             <div className='div_background-img'>
-              <p>Chez vous, partout et ailleurs</p>
+              <p>Chez vous,<br/> partout et ailleurs</p>
               <img 
                 src={background_img}
                 alt="Image panoramique d'un paysage"

@@ -1,7 +1,7 @@
 header {
     height: 4.25 rem;
     @include    devices(mobile) {
-        
+        padding-bottom: 2rem;
     }
 
     .div_headerflex {
