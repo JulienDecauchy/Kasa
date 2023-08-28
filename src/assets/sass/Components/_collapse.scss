@@ -73,22 +73,39 @@
             width: 36rem;
             padding-right: 1rem;
             padding-top: 0.5rem;
+            @include    devices(mobile) {
+                width: 19rem;
+                height: 1.8rem;
+                padding-top: 0.3rem;
+            }
 
             p {
             margin: 0;
             padding-left: 1.5rem;
             color: white;
+            @include    devices(mobile) {
+                font-size: 13px;
+                padding-left: 0.8rem;
+            }
             }
 
             .chevron {
                 transform: rotate(180deg);
                 transition: 0.4s ease-in-out;
                 cursor: pointer;
+                @include    devices(mobile) {
+                    padding-top: 0.7rem;
+                    height: 0.6rem;
+                }
             }
 
             .rotation {
                 transform: rotate(0deg);
                 transition: 0.4s ease-in-out;
+                @include    devices(mobile) {
+                    padding-top: 0;
+                    padding-bottom: 0.7rem;
+                }
             }
         }
 
@@ -100,6 +117,9 @@
             opacity: 0;
             height: 0;
             transition: all 0.4s ease-in-out;
+            @include    devices(mobile) {
+                width: 19rem;
+            }
 
             p, ul {
             margin: 0;
@@ -107,6 +127,9 @@
             font-size: 1.2rem;
             list-style-type: none;
             color: #FF6060;
+            @include    devices(mobile) {
+                font-size: 12px;
+            }
             }
 
             ul li {
@@ -116,13 +139,19 @@
 
         }
 
-        .animatedText {
+        .animatedText-logement {
             opacity: 1;
             height: 14rem;
             transition: all 0.4s ease-in-out;
+            @include    devices(mobile) {
+                height: 10rem;
+            }
         }
 }
 
 #collapse_logement-right {
     margin-left: 16rem;
+    @include    devices(mobile) {
+        margin: 0;
+    }
 }

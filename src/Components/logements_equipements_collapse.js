@@ -33,7 +33,7 @@ function LogementsÉquipementsCollapse() {
 				        />
                     </div>
                 </div>
-                <div className={ showMore[index] ? "collapse_logement-detail-div animatedText" : "collapse_logement-detail-div"}>
+                <div className={ showMore[index] ? "collapse_logement-detail-div animatedText-logement" : "collapse_logement-detail-div"}>
                     {showMore[index] &&
                         <ul>
                                 {collapse.equipments.map((list, index) =>(
