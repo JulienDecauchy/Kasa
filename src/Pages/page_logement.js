@@ -12,18 +12,13 @@ function Logement() {
   const navigate = useNavigate();
   const jsonFilter = jsonLogement.filter(filter => filter.id === id)
   const errorFilter = jsonFilter.map(con => con.id)
-  console.log(errorFilter)
-  console.log(id)
 
-  /**marche pas = ! !!!!return!!!! ! + length */
   useEffect(() => {
-    jsonFilter.map(con => {
-      if (id !== con.id) {
+      if (errorFilter.length === 0) {
           navigate("*")
       }
       return
-    })
-	}, [ id, navigate ]);
+	}, []);
 
   let [index, setIndex] = useState(0);
   let [number, setNumber] = useState(1);
