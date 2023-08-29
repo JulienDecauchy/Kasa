@@ -1,5 +1,9 @@
 .aproposCollapse {
     padding-bottom: 2rem;
+    @include    devices(mobile) {
+        width: 19rem;
+        padding-bottom: 1rem;
+    }
 
         .collapse_title-Div {
         font-size: 1.5rem;
@@ -12,22 +16,38 @@
         width: 90rem;
         padding-right: 1rem;
         padding-top: 0.5rem;
+        @include    devices(mobile) {
+            width: 19rem;
+            height: 1.8rem;
+            padding-top: 0.3rem;
+        }
 
              p {
             margin: 0;
             padding-left: 1.5rem;
             color: white;
+            @include    devices(mobile) {
+                font-size: 13px;
+            }
             }
 
             .chevron {
                 transform: rotate(180deg);
                 transition: 0.4s ease-in-out;
                 cursor: pointer;
+                @include    devices(mobile) {
+                    padding-top: 0.7rem;
+                    height: 0.6rem;
+                }
             }
 
             .rotation {
                 transform: rotate(0deg);
                 transition: 0.4s ease-in-out;
+                @include    devices(mobile) {
+                    padding-top: 0;
+                    padding-bottom: 0.7rem;
+                }
             }
 
         }
@@ -40,6 +60,9 @@
             opacity: 0;
             height: 0;
             transition: all 0.4s ease-in-out;
+            @include    devices(mobile) {
+                width: 19rem;
+            }
 
             p, ul {
                 margin: 0;
@@ -49,6 +72,9 @@
                 font-size: 1.2rem;
                 list-style-type: none;
                 color: #FF6060;
+                @include    devices(mobile) {
+                    font-size: 12px;
+                }
                 li {
                     white-space: pre-wrap;
                 }
@@ -59,6 +85,9 @@
             opacity: 1;
             height: 7rem;
             transition: all 0.4s ease-in-out;
+            @include    devices(mobile) {
+                height: 10rem;
+            }
         }
 
         /************************************************/
